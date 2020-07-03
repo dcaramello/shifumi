@@ -31,7 +31,7 @@ Mais également d'appliquer une méthode de travail d'entreprise.
 - L'ordinateur choisit à son tour de manière aléatoire et affiche son choix
 - Une fois les deux choix effectué, on annonce le vainqueur
 
-##Spécifications techniques
+## Spécifications techniques
 
 - Le projet est codé dans une base boilerplate qui respecte les standards de l'industrie
 - Le JavaScript est dans un fichier séparé
@@ -41,7 +41,7 @@ Mais également d'appliquer une méthode de travail d'entreprise.
 - Le projet est hebergé sur une gh-page
 - Le repository contient un fichier README, une description, des mots clés et des commits
 
-##Pour aller plus loin 
+## Pour aller plus loin 
 
 - Faites jouer la partie en plusieurs manches, le jeu continue tant que peronne n'a atteint trois victoires.
  il vous faudra donc compter les poins
