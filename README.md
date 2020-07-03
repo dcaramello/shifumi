@@ -50,6 +50,6 @@ Mais également d'appliquer une méthode de travail d'entreprise.
  qu'il choisit bien pierre, feuille ou ciseaux
 --- Attention par contre sa saisie est insensible à la casse---
 
-- Pernettez au joueur de rejouer une fois la partie finie
+- Permettez au joueur de rejouer une fois la partie finie
 
 - Organisez au maximum votre code en fonctions
