@@ -4,12 +4,12 @@
 alert("Bienvenue\nUne petite partie de Shifumi ?");
 
 // Allow to enter and store the name
-var name = prompt("Rentrez votre nom");
+var userName = prompt("Rentrez votre nom");
 
 
-// Allow user to enter a value (pierre, feuille, ciseaux)
-var userValue = prompt("Bonjour " + name + " \n\npierre , feuille  ou  ciseaux ?");
-
+// Allow user to enter a value and store this (pierre, feuille, ciseaux)
+var userChoice = prompt("Bonjour " + userName + " \n\npierre , feuille  ou  ciseaux ?");
+console.log(userChoice);
 
 
 // Variable for a computer
@@ -29,19 +29,28 @@ function computerChoice(){
     var pcChoice = "";
 
     if(result === 0) {
+        pcChoice = pcValue["0"];
         console.log("L'ordinateur à choisi " + pcValue["0"]);
     }
     else if(result === 1) {
+        pcChoice = pcValue["1"];
         console.log("L'ordinateur à choisi " + pcValue["1"]);
     }
     else{
+        pcChoice = pcValue["2"];
         console.log("L'ordinateur à choisi " + pcValue["2"]);
     }
     return pcChoice;
 }
 
-pcChoice = computerChoice(pcValue);
-computerChoice;
+var pcChoice = computerChoice(pcValue);
+
+// Print result of player en computer
+
+var print = alert("Vous avez choisi : " + userChoice + "\n\nL'ordinateur à choisi : " + pcChoice + "\n\n" );       
+
+
+
 
 
 
