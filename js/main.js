@@ -1,4 +1,4 @@
-//  ...~~~*** Jeux du Shifumi ***~~~... //
+//  ...~~~*** Shifumi games ***~~~... //
 
 // Welcome message
 alert("Bienvenue\nUne petite partie de Shifumi ?");
@@ -74,32 +74,33 @@ var pcChoice = computerChoice(pcValue);
 var print = alert("Vous avez choisi : " + userChoice + "\n\nL'ordinateur à choisi : " + pcChoice + "\n\n" );       
 
 // Compare and determine the winner
-
-
-
 if (userChoice === pcChoice) {
-    console.log("equality");
+    var equality = "Egalité";
+    console.log(equality);
 }
 
-else if (userChoice==="ciseaux" && pcChoice==="feuille" || 
+else if(userChoice==="ciseaux" && pcChoice==="feuille" || 
         userChoice==="feuille" && pcChoice==="pierre" ||
         userChoice==="pierre" && pcChoice==="ciseaux" ) {
-        console.log("player WIN !");
-}
-
+        var playerWin = "Gagné";
+        console.log(playerWin);       
+    }
 else{
-    console.log("loose");
+    var pcWin = "Perdu";
+    console.log(pcWin);
+    }
+    
+// Display the winner
+if (equality) {
+    alert("égalité !");
+}   
+else if (playerWin) {
+    alert("Vous gagné !");
 }
 
-   
-// ciseaux > feuille
-// feuille > pierre
-// pierre > ciseaux 
-// pierre === pierre
-// ciseaux === ciseaux
-// feuille === feuille
-        
-
+else {
+    alert("Vous avez perdu !");
+}
 
 
 
