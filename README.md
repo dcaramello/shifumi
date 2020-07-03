@@ -1,18 +1,18 @@
-#Jeux du Shifumi (Pierre, feuille, ciseaux)
+# Jeux du Shifumi (Pierre, feuille, ciseaux)
 
-##Règle du jeux :
+## Règle du jeux :
 
 La pierre bat les ciseaux,
 les ciseaux battent la feuille,
 la feuille bat la pierre.
 
-###Pourquoi ce projet ?
+### Pourquoi ce projet ?
 
 ce projet a pour but de mettre en application les compétences apprisent les 2 premières semaines
 au cours de ma formation développeur web et web mobile au centre de formation AFPA de St Etienne du Rouvray.
 Mais également d'appliquer une méthode de travail d'entreprise.
 
-##Compétences acquises :
+## Compétences acquises :
 
 - Comprendre les types de données
 - Stocker des données dans des variables
@@ -23,7 +23,7 @@ Mais également d'appliquer une méthode de travail d'entreprise.
 - Schématiser un programme
 - Organiser son code de manière propre et maintenable
 
-##Spécifications fonctionnelles 
+## Spécifications fonctionnelles 
 
 - Le joueur arrive sur le site, il voit un message d'accueil
 - Le joueur peut ensuite indiquer son nom à la machine, ce nom est utilisé ensuite pour s'adresser au joueur
