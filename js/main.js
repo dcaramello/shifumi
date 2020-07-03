@@ -7,10 +7,34 @@ alert("Bienvenue\nUne petite partie de Shifumi ?");
 var userName = prompt("Rentrez votre nom");
 
 
-// Allow user to enter a value and store this (pierre, feuille, ciseaux)
-var userChoice = prompt("Bonjour " + userName + " \n\npierre , feuille  ou  ciseaux ?");
-console.log(userChoice);
+// Variable for a player
+userValue = ["pierre", "feuille", "ciseaux"];
 
+// Allow user to enter a value and store this (pierre, feuille, ciseaux)
+function user() {
+    var userChoice= "";
+
+    var userCapture = prompt("Bonjour " + userName + " \npierre , feuille  ou  ciseaux ?");
+
+    if (userCapture==="pierre") {
+        userChoice=userValue["0"];
+        console.log("le joueur à choisi " + userValue["0"]);
+    }
+    else if (userCapture==="feuille") {
+        userChoice=userValue["1"];
+        console.log("le joueur à choisi " + userValue["1"]);
+    }
+    else if (userCapture==="ciseaux") {
+        userChoice=userValue["2"];
+        console.log("le joueur à choisi " + userValue["2"]);
+    }
+    else {
+        console.log("aucun choix valide");
+    }
+    return userChoice;
+}
+
+var userChoice = user(userValue);
 
 // Variable for a computer
 var pcValue = ["pierre", "feuille", "ciseaux"];
@@ -45,9 +69,36 @@ function computerChoice(){
 
 var pcChoice = computerChoice(pcValue);
 
-// Print result of player en computer
+// Display of player and computer results
 
 var print = alert("Vous avez choisi : " + userChoice + "\n\nL'ordinateur à choisi : " + pcChoice + "\n\n" );       
+
+// Compare and determine the winner
+
+
+
+if (userChoice === pcChoice) {
+    console.log("equality");
+}
+
+else if (userChoice==="ciseaux" && pcChoice==="feuille" || 
+        userChoice==="feuille" && pcChoice==="pierre" ||
+        userChoice==="pierre" && pcChoice==="ciseaux" ) {
+        console.log("player WIN !");
+}
+
+else{
+    console.log("loose");
+}
+
+   
+// ciseaux > feuille
+// feuille > pierre
+// pierre > ciseaux 
+// pierre === pierre
+// ciseaux === ciseaux
+// feuille === feuille
+        
 
 
 
