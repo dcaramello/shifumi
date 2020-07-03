@@ -44,7 +44,7 @@ Mais également d'appliquer une méthode de travail d'entreprise.
 ## Pour aller plus loin 
 
 - Faites jouer la partie en plusieurs manches, le jeu continue tant que peronne n'a atteint trois victoires.
- il vous faudra donc compter les poins
+ il vous faudra donc compter les points
 
 - Vérifiez les saisies utilisateur. Vous vous assurez que le nom du joueur fait entre 2 et 20 caractères et
  qu'il choisit bien pierre, feuille ou ciseaux
