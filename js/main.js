@@ -7,100 +7,106 @@ alert("Bienvenue\nUne petite partie de Shifumi ?");
 var userName = prompt("Rentrez votre nom");
 
 
+
 // Variable for a player
 value = ["pierre", "feuille", "ciseaux"];
+do {
+    var scorePlayer = 0;
+    var scorePc = 0;
 
-// Allow user to enter a value and store this (pierre, feuille, ciseaux)
-function user() {
-    var userChoice= "";
 
-    var userCapture = prompt("Bonjour " + userName + " \npierre , feuille  ou  ciseaux ?");
 
-    if (userCapture==="pierre") {
-        userChoice=value["0"];
-        console.log("le joueur à choisi " + value["0"]);
-    }
-    else if (userCapture==="feuille") {
-        userChoice=value["1"];
-        console.log("le joueur à choisi " + value["1"]);
-    }
-    else if (userCapture==="ciseaux") {
-        userChoice=value["2"];
-        console.log("le joueur à choisi " + value["2"]);
-    }
-    else {
-        console.log("aucun choix valide");
-    }
-    return userChoice;
-}
-var userChoice = user(value);
+    // Allow user to enter a value and store this (pierre, feuille, ciseaux)
+    function user() {
+        var userChoice = "";
 
-// Créate function for a computer choice
-function computerChoice(){
+        var userCapture = prompt("Bonjour " + userName + " \npierre , feuille  ou  ciseaux ?");
 
-    // Generate a random number 0,1 or 2
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
+        if (userCapture === "pierre") {
+            userChoice = value["0"];
+            console.log("le joueur à choisi " + value["0"]);
+        }
+        else if (userCapture === "feuille") {
+            userChoice = value["1"];
+            
+            console.log("le joueur à choisi " + value["1"]);
+        }
+        else if (userCapture === "ciseaux") {
+            userChoice = value["2"];
+            console.log("le joueur à choisi " + value["2"]);
+        }
+        else {
+            console.log("aucun choix valide");
+        }
+        return userChoice;
     }
-      
-    var result = getRandomInt(3);
+    var userChoice = user(value);
+
+    // Créate function for a computer choice
+    function computerChoice() {
+
+        // Generate a random number 0,1 or 2
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        var result = getRandomInt(3);
         console.log(result);
 
-    var pcChoice = "";
+        var pcChoice = "";
 
-    if(result === 0) {
-        pcChoice = value["0"];
-        console.log("L'ordinateur à choisi " + value["0"]);
+        if (result === 0) {
+            pcChoice = value["0"];
+            console.log("L'ordinateur à choisi " + value["0"]);
+        }
+        else if (result === 1) {
+            pcChoice = value["1"];
+            console.log("L'ordinateur à choisi " + value["1"]);
+        }
+        else {
+            pcChoice = value["2"];
+            console.log("L'ordinateur à choisi " + value["2"]);
+        }
+        return pcChoice;
     }
-    else if(result === 1) {
-        pcChoice = value["1"];
-        console.log("L'ordinateur à choisi " + value["1"]);
+    var pcChoice = computerChoice(value);
+
+    // Display of player and computer results
+    var print = alert("Vous avez choisi : " + userChoice + "\n\nL'ordinateur à choisi : " + pcChoice + "\n\n");
+
+    // Compare and determine the winner
+
+    if (userChoice === pcChoice) {
+        var equality = "equality";
+        console.log(equality);
     }
-    else{
-        pcChoice = value["2"];
-        console.log("L'ordinateur à choisi " + value["2"]);
-    }
-    return pcChoice;
-}
-var pcChoice = computerChoice(value);
 
-// Display of player and computer results
-var print = alert("Vous avez choisi : " + userChoice + "\n\nL'ordinateur à choisi : " + pcChoice + "\n\n" );       
-
-// Compare and determine the winner
-if (userChoice === pcChoice) {
-    var equality = "equality";
-    console.log(equality);
-}
-
-else if(userChoice==="ciseaux" && pcChoice==="feuille" || 
-        userChoice==="feuille" && pcChoice==="pierre" ||
-        userChoice==="pierre" && pcChoice==="ciseaux" ) {
+    else if (userChoice === "ciseaux" && pcChoice === "feuille" ||
+        userChoice === "feuille" && pcChoice === "pierre" ||
+        userChoice === "pierre" && pcChoice === "ciseaux") {
         var playerWin = "win";
-        console.log(playerWin);       
+        console.log(playerWin);
+        scorePlayer+=1;
+        console.log(scorePlayer);
     }
-else{
-    var pcWin = "loose";
-    console.log(pcWin);
+    else {
+        var pcWin = "loose";
+        console.log(pcWin);
+        scorePc+=1;
+        console.log(scorePc);
     }
-    
-// Display the winner
-if (equality) {
-    alert("égalité !");
-}   
-else if (playerWin) {
-    alert("Bravo " + userName + ", vous avez gagné!");
-}
-
-else {
-    alert("Vous avez perdu !");
-}
 
 
+    // Display the winner
+    if (equality) {
+        alert("égalité ! score " + userName + " :" + scorePlayer + " : " + scorePc + ": score ordnateur");
 
+    }
+    else if (playerWin) {
+        alert("Bravo ! score " + userName + " :" + scorePlayer + " : " + scorePc + ": score ordnateur");
+    }
 
-
-
-
-
-
+    else {
+        alert("Perdu ! score " + userName + " :" + scorePlayer + " : " + scorePc + ": score ordnateur");
+    }
+} while (scorePlayer < 3 && scorePc < 3);
