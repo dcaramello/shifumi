@@ -41,15 +41,3 @@ Mais également d'appliquer une méthode de travail d'entreprise.
 - Le projet est hebergé sur une gh-page
 - Le repository contient un fichier README, une description, des mots clés et des commits
 
-## Pour aller plus loin 
-
-- Faites jouer la partie en plusieurs manches, le jeu continue tant que personne n'a atteint trois victoires.
- il vous faudra donc compter les points
-
-- Vérifiez les saisies utilisateur. Vous vous assurez que le nom du joueur fait entre 2 et 20 caractères et
- qu'il choisit bien pierre, feuille ou ciseaux
---- Attention par contre sa saisie est insensible à la casse---
-
-- Permettez au joueur de rejouer une fois la partie finie
-
-- Organisez au maximum votre code en fonctions
